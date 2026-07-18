@@ -1,7 +1,7 @@
 # BREAKTHROUGH 39: Topological Quantum Error Correction for Satellite Communication Links
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-
+![Quantum](https://img.shields.io/badge/Domain-Quantum-blue)
 
 This repository implements the research pipeline for the **BREAKTHROUGH 39: Topological Quantum Error Correction for Satellite Communication Links** project, developed by the Runtime-Slayers research group.
 
@@ -15,16 +15,17 @@ The flowchart below visualizes the methodology, code modules, and logical execut
 graph TD
     subgraph "Phase 1: Environment & System Setup"
         N0["Ingest & Parse: Topological Quantum Error Correction for Satellite Communication Links"]
-        N1["Surface Code for Satellite Channels"]
+        N1["Atmospheric turbulence"]
     end
     subgraph "Phase 2: Signal & Core Processing"
-        N2["Simulation Code"]
-        N3["Pauli X"]
+        N2["Background radiation"]
+        N3["Detector dark counts"]
+        N4["Pauli X"]
     end
     subgraph "Phase 3: Validation & Performance Evaluation"
-        N4["Depolarising Channel"]
-        N5["Distance 3 Surface Code Syndrome"]
-        N6["Minimum Weight Matching"]
+        N5["Depolarising Channel"]
+        N6["Distance 3 Surface Code Syndrome"]
+        N7["Minimum Weight Matching"]
     end
     N0 --> N1
     N1 --> N2
@@ -32,13 +33,15 @@ graph TD
     N3 --> N4
     N4 --> N5
     N5 --> N6
+    N6 --> N7
+    N7 -->|"Optimize Parameters / Adaptive Loop"| N2
 ```
 
 ---
 
 ## 🔍 Abstract & Research Context
 
-
+--- # PART A: WHAT IS THIS AND WHY DOES IT MATTER? ## 1. The Idea in Plain English Quantum communication via satellite is the future of secure communication. China's Micius satellite demonstrated quantum key distribution (QKD) over 1,200 km in 2017. But there's a critical problem: **quantum states are incredibly fragile**. Photons traveling through space encounter cosmic radiation, thermal noise, atmospheric turbulence, and detector imperfections that introduce errors at rates of 5-15%. Classical error correction can't be used directly on quantum data (no-cloning theorem). You need **quantum error correction (QEC)**, but most QEC codes require thousands of physical qubits per logical qubit — impractical for satellite links with limited photon budgets. **Your breakthrough**: Apply **topological quantum error correction** — specifically the surface code and toric code — adapted for the specific noise characteristics of satellite-to-ground quantum channels. Topological codes are special because errors must form closed loops (anyons) to cause logical failures, giving them an inherently high threshold (~1% for surface codes vs ~10⁻⁴ for concatenated codes).
 
 ---
 
