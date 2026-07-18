@@ -9,20 +9,29 @@ This repository implements the research pipeline for the **BREAKTHROUGH 39: Topo
 
 ## 📊 Pipeline Architecture
 
-The flowchart below visualizes the methodology and execution sequence implemented in this project:
+The flowchart below visualizes the methodology, code modules, and logical execution sequence of the project:
 
 ```mermaid
 graph TD
-    subgraph Quantum Layer
-        A["Quantum State / Qubit Initialization"] --> B["Channel Transmission & Perturbations"]
+    subgraph "Phase 1: Environment & System Setup"
+        N0["Ingest & Parse: Topological Quantum Error Correction for Satellite Communication Links"]
+        N1["Surface Code for Satellite Channels"]
     end
-    subgraph Information Processing
-        B --> C["Quantum Error Correction<br>Topological Surface Code / BB84 Protocol"]
-        C --> D["Tamper Detection / Measurement Statistics"]
+    subgraph "Phase 2: Signal & Core Processing"
+        N2["Simulation Code"]
+        N3["Pauli X"]
     end
-    subgraph System Validation
-        D --> E["Secure Key Rate & Fidelity Assessment"]
+    subgraph "Phase 3: Validation & Performance Evaluation"
+        N4["Depolarising Channel"]
+        N5["Distance 3 Surface Code Syndrome"]
+        N6["Minimum Weight Matching"]
     end
+    N0 --> N1
+    N1 --> N2
+    N2 --> N3
+    N3 --> N4
+    N4 --> N5
+    N5 --> N6
 ```
 
 ---
